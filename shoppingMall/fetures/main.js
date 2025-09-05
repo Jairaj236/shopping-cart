@@ -17,7 +17,7 @@
             <div class="buttons">
               <button onclick="decrement('${id}')" class="bi bi-plus-lg">--</button>
               <div id=${id} class="quantity">
-             {0}
+             0
               </div>
               <button onclick="increment('${id}')" class="bi bi-plus-lg">+</button>
             </div>
@@ -36,6 +36,8 @@
              if(remCart !== undefined){
                remCart.item -= 1;
              }
+            
+             updateCart(id)
    console.log(cart)
 
      }
@@ -54,5 +56,13 @@
       search.item +=1
      }
      console.log(cart)
+      updateCart(id)
+   }
 
+   const updateCart = (id)=>{
+   
+           const updateCartValues   =  cart.find((data)=> data.id === id)
+          console.log(updateCartValues.item)
+           document.querySelector(".quantity").textContent = updateCartValues.item
+       
    }
