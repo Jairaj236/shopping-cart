@@ -98,8 +98,11 @@
 
 .bi-dash-lg {
   color: red;
+    padding: 4px;
+
 }
 
 .bi-plus-lg {
+  padding: 4px;
   color: green;
 }
